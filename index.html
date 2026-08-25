@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andres Chavez - Game Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Andres Chavez</h1>
+        <p>Game Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button id="theme-toggle">🌙</button>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Andres Chavez, a passionate game designer with a love for creating immersive gaming experiences. I specialize in game mechanics, level design, and storytelling.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="aaagames">AAA Games</button>
+                <button class="filter-btn" data-filter="undergradwork">Undergrad</button>
+                <button class="filter-btn" data-filter="engineering">Software Engineering</button>
+            </div>
+
+            <article class="project-card" data-category="aaagames" style="background-image: url('https://picsum.photos/seed/project1/600/400');">
+                <h3>Project One</h3>
+                <p>Placeholder description of a game or project you built.</p>
+            </article>
+
+            <article class="project-card" data-category="engineering">
+                <h3>Project Two</h3>
+                <p>Placeholder description of another project.</p>
+            </article>
+
+            <article class="project-card" data-category="undergradwork">
+                <h3>Project Three</h3>
+                <p>Placeholder description of a third project.</p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, please reach out via email at <a href="mailto:andreschavez@example.com">andreschavez@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Andres Chavez</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

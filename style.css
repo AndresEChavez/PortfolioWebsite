@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+header {
+  background: #1a1a2e;
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: #16213e;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #e94560;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #e94560;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#projects h2 {
+  width: 100%;
+}
+
+.project-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+  z-index: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-card h3,
+.project-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card h3 {
+  color: white;
+}
+
+.filters{
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn{
+  padding: 0.5rem 1rem;
+  border: 2px solid #16213e;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn.active{
+  background: #16213e;
+  color: white;
+}
+
+body.dark-mode .filter-btn{
+  border-color: #e94560;
+  background: transparent;
+  color: #eee;
+}
+
+body.dark-mode .filter-btn.active{
+  background: #e94560;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1a1a2e;
+  color: white;
+}
+
+body.dark-mode {
+  background: #1a1a2e;
+  color: #eee;
+}
+
+body.dark-mode .project-card {
+  background: #16213e;
+  color: #eee;
+}
+
+body.dark-mode .project-card h3 {
+  color: #e94560;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
