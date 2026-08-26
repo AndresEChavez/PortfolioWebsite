@@ -1,6 +1,18 @@
+const gallery = document.getElementById('project-gallery');
+
+function renderProjects(list) {
+  gallery.innerHTML = list.map((project) => `
+    <a class="project-card" href="project.html?id=${project.id}" style="background-image: url('${project.image}');">
+      <h3>${project.title}</h3>
+      <p>${project.shortDescription}</p>
+    </a>
+  `).join('');
+}
+
+renderProjects(projects);
+
 const toggleButton = document.getElementById('theme-toggle');
 const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach((button) => {
     button.addEventListener('click', () =>{
@@ -9,16 +21,11 @@ filterButtons.forEach((button) => {
         filterButtons.forEach((btn) => btn.classList.remove('active'));
         button.classList.add('active');
 
-        projectCards.forEach((card) => {
-            if (filter === 'all' || card.dataset.category === filter)
-            {
-                card.style.display = 'block';
-            }
-            else
-            {
-                card.style.display = 'none';
-            }
-        });
+        const filtered = filter === 'all'
+            ? projects
+            : projects.filter((project) => project.category === filter);
+
+        renderProjects(filtered);
     });
 });
 
