@@ -109,6 +109,38 @@ h2 {
   color: white;
 }
 
+.back-link {
+  display: inline-block;
+  margin: 1.5rem 0;
+  color: #16213e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.dark-mode .back-link {
+  color: #e94560;
+}
+
+#project-hero {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+#project-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#project-media img {
+  border-radius: 8px;
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+}
+
 .filters{
   width: 100%;
   display: flex;
