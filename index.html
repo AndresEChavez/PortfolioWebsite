@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andres Chavez - Game Designer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<button id="theme-toggle">🌙</button>
+
 <body>
     <header>
-        <h1>Andres Chavez</h1>
-        <p>Game Designer</p>
+        <span class="console-title">Andres Chavez · Game Designer</span>
+        <span class="console-clock" id="console-clock">00:00:00</span>
     </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-    <main>
-        <section id="about">
+    <main class="stage">
+        <section class="panel active" data-panel="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Andres Chavez, a passionate game designer with a love for creating immersive gaming experiences. I specialize in game mechanics, level design, and storytelling.</p>
+            <p>Placeholder bio goes here. A couple sentences about your background in game dev/design and what you're
+                into.</p>
         </section>
 
-        <section id="projects">
+        <section class="panel" data-panel="projects">
             <h2>Projects</h2>
 
             <div class="filters">
@@ -35,20 +30,46 @@
                 <button class="filter-btn" data-filter="engineering">Software Engineering</button>
             </div>
 
-            <div id ="project-gallery"></div>
+            <div id="project-gallery"></div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, please reach out via email at <a href="mailto:andreschavez@example.com">andreschavez@example.com</a>.</p>
+        <section class="panel" data-panel="skills">
+            <h2>Skills</h2>
+            <p>Placeholder: list out your tools/languages/engines here, we can make this a nicer grid later.</p>
+        </section>
+
+        <section class="panel" data-panel="contact">
+            <h2>Contact</h2>
+            <p>Placeholder: email, LinkedIn, itch.io, GitHub — whatever links you'll want later.</p>
         </section>
     </main>
+    <nav class="dock">
+        <div class="console-menu">
+            <button class="console-tile active" data-category="about">
+                <span class="console-icon">🧑</span>
+                <span class="console-label">About</span>
+            </button>
+            <button class="console-tile" data-category="projects">
+                <span class="console-icon">🎮</span>
+                <span class="console-label">Projects</span>
+            </button>
+            <button class="console-tile" data-category="skills">
+                <span class="console-icon">⭐</span>
+                <span class="console-label">Skills</span>
+            </button>
+            <button class="console-tile" data-category="contact">
+                <span class="console-icon">✉️</span>
+                <span class="console-label">Contact</span>
+            </button>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Andres Chavez</p>
-    </footer>
-    <script src="projects-data.js"></script>
-    <script src="theme.js"></script>
-    <script src="script.js"></script>
+        <div class="console-progress">
+            <div class="console-progress-track"></div>
+            <div class="console-progress-dot" id="progress-dot"></div>
+        </div>
+    </nav>
+        <script src="projects-data.js"></script>
+        <script src="script.js"></script>
+        <script src="console.js"></script>
 </body>
 </html>

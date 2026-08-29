@@ -7,32 +7,124 @@
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
-  color: #222;
+  background: radial-gradient(circle at top, #16213e, #050510);
+  background-attachment: fixed;
+  color: #eee;
 }
 
 header {
-  background: #1a1a2e;
-  color: white;
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: #7a8bb5;
+}
+
+.stage {
+  min-height: 100vh;
+  padding: 0rem 2rem 8rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.dock {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(22, 33, 62, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 1rem 2rem 0.75rem;
+  z-index: 100;
+}
+
+.console-menu {
+  display: flex;
   gap: 2rem;
-  padding: 1rem;
-  background: #16213e;
+  margin-bottom: 0.75rem;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+.console-progress {
+  position: relative;
+  height: 2px;
 }
 
-nav a:hover {
-  color: #e94560;
+.console-progress-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.console-progress-dot {
+  position: absolute;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4fc3f7;
+  box-shadow: 0 0 10px #4fc3f7;
+  left: 9%;
+  transform: translateX(-50%);
+  transition: left 0.3s ease;
+}
+
+.console-tile {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.console-tile .console-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: rgba(255,255,255,0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.console-tile .console-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a8bb5;
+}
+
+.console-tile.active {
+  opacity: 1;
+}
+
+.console-tile.active .console-icon {
+  border-color: #4fc3f7;
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+}
+
+.console-tile.active .console-label {
+  color: #4fc3f7;
+}
+
+.console-tile:hover {
+  opacity: 1;
 }
 
 main {
@@ -117,10 +209,6 @@ h2 {
   text-decoration: none;
 }
 
-body.dark-mode .back-link {
-  color: #e94560;
-}
-
 #project-hero {
   width: 100%;
   border-radius: 10px;
@@ -163,61 +251,9 @@ body.dark-mode .back-link {
   color: white;
 }
 
-body.dark-mode .filter-btn{
-  border-color: #e94560;
-  background: transparent;
-  color: #eee;
-}
-
-body.dark-mode .filter-btn.active{
-  background: #e94560;
-}
-
 footer {
   text-align: center;
   padding: 2rem;
   background: #1a1a2e;
   color: white;
-}
-
-body.dark-mode {
-  background: #1a1a2e;
-  color: #eee;
-}
-
-body.dark-mode .project-card {
-  background: #16213e;
-  color: #eee;
-}
-
-body.dark-mode .project-card h3 {
-  color: #e94560;
-}
-
-#theme-toggle {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background: #16213e;
-  color: white;
-  font-size: 1.3rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  transition: transform 0.2s ease;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-body.dark-mode #theme-toggle {
-  background: #e94560;
 }
