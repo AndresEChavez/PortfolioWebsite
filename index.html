@@ -14,13 +14,36 @@
         <span class="console-clock" id="console-clock">00:00:00</span>
     </header>
     <main class="stage">
-        <section class="panel active" data-panel="about">
+        <section class="panel" data-panel="about">
             <h2>About Me</h2>
-            <p>Placeholder bio goes here. A couple sentences about your background in game dev/design and what you're
-                into.</p>
+            <div class="about-layout">
+                <div class="about-bio">
+                    <div id="p1" class="about-paragraph">
+                        <p>There is no bigger satisfaction than seeing someone having fun with a mechanic, a level,
+                            or a system you crafted from zero. That's why Game Design is my passion. Since the beginning
+                            of my Game Design career, my goal has been and will always be creating these feelings of
+                            amusement, serenity, and joy in players and inspire them to be their best version.</p>
+                    </div>
+                    <div id="p2" class="about-paragraph">
+                        <p>I grew up building "Mini-games" on Minecraft, I would create a creative world, make some rules,
+                        and write them on Minecraft signs and play them with friends.
+                        After that, I started designing levels on Halo 4's Forge Mode, and then I moved into Unity</p>
+                    </div>
+                    <div id="p3" class="about-paragraph">
+                        <p>I have a life outside games too, I enjoy playing Tennis, I like taking rides in my skateboard, I
+                        enjoy watching anime, Star Wars is my favorite thing in the galaxy, Coldplay is my favorite band
+                        and I recently started to write stories as a hobby.</p>
+                    </div>
+                </div>
+
+                <div class="about-photo">
+                    <img src="https://placehold.co/280x280/16213e/eee?text=Photo" alt="Andres Chavez">
+                    <a href="resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+                </div>
+            </div>
         </section>
 
-        <section class="panel" data-panel="projects">
+        <section class="panel active" data-panel="projects">
             <h2>Projects</h2>
 
             <div class="filters">
@@ -45,11 +68,11 @@
     </main>
     <nav class="dock">
         <div class="console-menu">
-            <button class="console-tile active" data-category="about">
+            <button class="console-tile" data-category="about">
                 <span class="console-icon">🧑</span>
                 <span class="console-label">About</span>
             </button>
-            <button class="console-tile" data-category="projects">
+            <button class="console-tile active" data-category="projects">
                 <span class="console-icon">🎮</span>
                 <span class="console-label">Projects</span>
             </button>
@@ -68,8 +91,9 @@
             <div class="console-progress-dot" id="progress-dot"></div>
         </div>
     </nav>
-        <script src="projects-data.js"></script>
-        <script src="script.js"></script>
-        <script src="console.js"></script>
+    <script src="projects-data.js"></script>
+    <script src="script.js"></script>
+    <script src="console.js"></script>
 </body>
+
 </html>

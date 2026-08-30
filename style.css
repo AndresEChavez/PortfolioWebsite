@@ -1,3 +1,4 @@
+/*Main body*/
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,30 @@ header {
   color: #7a8bb5;
 }
 
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.30em;
+  margin-left: 40%;
+  margin-right: 30%;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  padding-bottom: 0.25rem;
+  color: #7a8bb5;
+}
+
+/*Icon row/dock*/
 .stage {
   min-height: 100vh;
   padding: 0rem 2rem 8rem;
@@ -127,38 +152,84 @@ header {
   opacity: 1;
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+/*About*/
+.about-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-section {
-  margin-bottom: 4rem;
+.about-paragraph {
+  flex: 1 1 300px;
 }
 
-h2 {
-  font-size: 1.8rem;
+.about-paragraph p {
   margin-bottom: 1rem;
-  border-bottom: 3px solid #e94560;
+}
+
+.about-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.about-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.resume-btn{
   display: inline-block;
-  padding-bottom: 0.25rem;
+  padding: 0.6rem 1.2rem;
+  background: #e94560;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+}
+
+/*Projects*/
+.filters{
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn{
+  padding: 0.5rem 1rem;
+  background: #16213e;
+  color: #7a8bb5;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn.active{
+  border-color: #4fc3f7;
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
 }
 
 #project-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  width: 100%;
-}
-
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-#projects h2 {
   width: 100%;
 }
 
@@ -176,6 +247,7 @@ h2 {
   color: white;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
 }
 
 .project-card::before {
@@ -191,14 +263,20 @@ h2 {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.project-card h3,
-.project-card p {
+.project-card h3{
   position: relative;
+  color: white;
   z-index: 1;
 }
 
-.project-card h3 {
-  color: white;
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#projects h2 {
+  width: 100%;
 }
 
 .back-link {
@@ -229,28 +307,7 @@ h2 {
   object-fit: cover;
 }
 
-.filters{
-  width: 100%;
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.filter-btn{
-  padding: 0.5rem 1rem;
-  border: 2px solid #16213e;
-  background: white;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.filter-btn.active{
-  background: #16213e;
-  color: white;
-}
-
+/*Footer*/
 footer {
   text-align: center;
   padding: 2rem;
