@@ -6,34 +6,31 @@
   <title>Project — Andres Chavez</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<button id="theme-toggle">🌙</button>
 <body>
-  <header>
-    <h1>Andres Chavez</h1>
-    <p>Game Designer</p>
-  </header>
+    <header>
+        <span class="console-title">Andres Chavez · Game Designer</span>
+        <span class="console-clock" id="console-clock">00:00:00</span>
+    </header>
 
-  <nav>
-    <a href="index.html#about">About</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-
-  <main>
     <a href="index.html" class="back-link">&larr; Back to home</a>
 
+  <main>
     <section id="project-detail">
       <h2 id="project-title"></h2>
       <img id="project-hero" src="" alt="">
       <p id="project-description"></p>
-
-      <div id="project-media"></div>
+      <div id="project-media" class="media-gallery"></div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Andres Chavez</p>
   </footer>
+
+  <div id="media-modal" class="media-modal">
+    <button id="modal-close" class="modal-close">&times;</button>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
 
   <script src="projects-data.js"></script>
   <script src="theme.js"></script>
