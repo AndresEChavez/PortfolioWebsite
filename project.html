@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project — Andres Chavez</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <span class="console-title">Andres Chavez · Game Designer</span>
-        <span class="console-clock" id="console-clock">00:00:00</span>
-    </header>
 
-    <a href="index.html" class="back-link">&larr; Back to home</a>
+<body>
+  <header>
+    <span class="console-title">Andres Chavez · Game Designer</span>
+    <span class="console-clock" id="console-clock">00:00:00</span>
+  </header>
+
+  <a href="index.html" class="back-link">&larr; Back to home</a>
 
   <main>
     <section id="project-detail">
       <h2 id="project-title"></h2>
-      <img id="project-hero" src="" alt="">
-      <p id="project-description"></p>
+      <div id="project-tags" class="tags-container"></div>
       <div id="project-media" class="media-gallery"></div>
+      <div id="project-information" class="project-information">
+        <div id="project-about">
+          <h3>About</h3>
+          <p id="project-about-content"></p>
+        </div>
+        <div id="project-tools">
+          <h3>Tools</h3>
+          <p id="project-tools-content"></p>
+        </div>
+        <div id="project-resp">
+          <h3>Responsibilities</h3>
+          <p id="project-resp-content"></p>
+        </div>
+        <div id="project-experience">
+          <h3 id="project-experience-title">Experience</h3>
+          <p id="project-experience-content"></p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -29,11 +48,14 @@
 
   <div id="media-modal" class="media-modal">
     <button id="modal-close" class="modal-close">&times;</button>
+    <button id="modal-prev" class="modal-nav modal-prev">&#10094;</button>
     <div class="modal-content" id="modal-content"></div>
+    <button id="modal-next" class="modal-nav modal-next">&#10095;</button>
   </div>
 
   <script src="projects-data.js"></script>
   <script src="theme.js"></script>
   <script src="project.js"></script>
 </body>
+
 </html>

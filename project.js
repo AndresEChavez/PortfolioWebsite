@@ -4,11 +4,11 @@ const project = projects.find((p) => p.id === id);
 
 if (project) {
     document.getElementById('project-title').textContent = project.title;
-    document.getElementById('project-description').textContent = project.fullDescription;
-
-    const hero = document.getElementById('project-hero');
-    hero.src = project.image;
-    hero.alt = project.title;
+    document.getElementById('project-about-content').textContent = project.about;
+    document.getElementById('project-tools-content').textContent = project.tools.join(', ');
+    document.getElementById('project-resp-content').textContent = project.responsibilities.join(', ');
+    document.getElementById('project-experience-content').textContent = project.experience;
+    document.getElementById('project-tags').innerHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
     const mediaContainer = document.getElementById('project-media');
 
@@ -30,38 +30,49 @@ if (project) {
     const modal = document.getElementById('media-modal');
     const modalContent = document.getElementById('modal-content');
     const modalClose = document.getElementById('modal-close');
+    const modalPrev = document.getElementById('modal-prev');
+    const modalNext = document.getElementById('modal-next');
+
+    let currentIndex = 0;
+
+    function showMedia(index) {
+        // wrap around: going before 0 jumps to the end, past the end jumps to 0
+        currentIndex = (index + project.media.length) % project.media.length;
+        const item = project.media[currentIndex];
+
+        if (item.type === 'image') {
+            modalContent.innerHTML = `<img src="${item.src}" alt="${project.title}">`;
+        } else {
+            modalContent.innerHTML = `
+      <iframe
+        src="https://www.youtube.com/embed/${item.youtubeId}?autoplay=1"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    `;
+        }
+    }
 
     document.querySelectorAll('.media-thumb').forEach((thumb) => {
         thumb.addEventListener('click', () => {
-            const item = project.media[thumb.dataset.index];
-
-            if (item.type === 'image') {
-                modalContent.innerHTML = `<img src="${item.src}" alt="${project.title}">`;
-            } else {
-                modalContent.innerHTML = `
-        <iframe
-          src="https://www.youtube.com/embed/${item.youtubeId}?autoplay=1"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      `;
-            }
-
+            showMedia(Number(thumb.dataset.index));
             modal.classList.add('open');
         });
     });
 
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('open');
-        modalContent.innerHTML = ''; // stops video playback when closed
-    });
+    modalPrev.addEventListener('click', () => showMedia(currentIndex - 1));
+    modalNext.addEventListener('click', () => showMedia(currentIndex + 1));
+
+    modalClose.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('open');
-            modalContent.innerHTML = '';
-        }
+        if (e.target === modal) closeModal();
     });
+
+    function closeModal() {
+        modal.classList.remove('open');
+        modalContent.innerHTML = '';
+    }
 }
 else {
     document.getElementById('project-title').textContent = 'Project not found';
