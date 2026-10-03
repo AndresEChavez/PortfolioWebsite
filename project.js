@@ -26,6 +26,14 @@ if (project) {
         }
     }).join('');
 
+    if (project.link && project.linkText) {
+        const projectLinkContainer = document.getElementById('project-link');
+        projectLinkContainer.innerHTML = `<a class="link-box" href="${project.link}" target="_blank" rel="noopener noreferrer">
+            ${project.linkText}
+            <span class="external-icon">↗</span>
+        </a>`;
+    }
+
     // Modal logic
     const modal = document.getElementById('media-modal');
     const modalContent = document.getElementById('modal-content');

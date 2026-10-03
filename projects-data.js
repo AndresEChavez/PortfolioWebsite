@@ -17,18 +17,25 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Two",
-    category: "engineering",
-    tags: [ "AAA Title", "R* Games", "Content Design"],
-    image: "https://picsum.photos/seed/project2/900/500",
+    title: "3, 2, 1 Launch!",
+    category: "undergradwork",
+    tags: [ "Undergrad Work", "Full Sail University", "NASA/LSP", "Game Design"],
+    image: "images/321Launch/321Launch_Thumb.png",
+    link: "https://apps.apple.com/us/app/3-2-1-launch/id6471444553",
+    linkText: "Download on the App Store",
     about: "Placeholder description of another project.",
     experience: "A longer placeholder writeup...",
     tools: [ "Unity", "C#", "Visual Studio", "Perforce", "Trello", "G Suite", "GarageBand" ],
     responsibilities: [ "Game Design", "Technical Design", "AI Balancing and Design", "Player movement systems", "Debugging and Bug fixing" ],
     media: [
-      { type: "image", src: "https://picsum.photos/seed/project2a/900/600" },
-      { type: "image", src: "https://picsum.photos/seed/project2b/900/600" },
-      { type: "video", youtubeId: "dQw4w9WgXcQ" }
+      { type: "image", src: "images/321Launch/projectPic0.webp" },
+      { type: "image", src: "images/321Launch/projectPic1.webp" },
+      { type: "video", youtubeId: "kHr4wBf4O6I" },
+      { type: "image", src: "images/321Launch/projectPic2.webp" },
+      { type: "image", src: "images/321Launch/projectPic3.jpeg" },
+      { type: "video", youtubeId: "CoMm8PRnWc8" },
+      { type: "image", src: "images/321Launch/projectPic4.jpeg" },
+      { type: "image", src: "images/321Launch/projectPic5.png" },
     ]
   },
   {

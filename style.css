@@ -428,6 +428,23 @@ h2 {
   right: 1.5rem;
 }
 
+#project-link {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.link-box {
+  padding: 0.5rem 1rem;
+  background: #16213e;
+  color: #7a8bb5;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
 #project-information {
   display: flex;
   gap: 2.5rem;
