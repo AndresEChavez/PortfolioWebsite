@@ -4,29 +4,72 @@ const projects = [
     title: "Grand Theft Auto VI",
     category: "aaagames",
     tags: [ "AAA Title", "R* Games", "Content Design"],
-    image: "https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg",
-    about: "Placeholder description of a game or project you built.",
-    experience: "A longer placeholder writeup...",
-    tools: [ "Unity", "C#", "Visual Studio", "Perforce", "Trello", "G Suite", "GarageBand" ],
-    responsibilities: [ "Game Design", "Technical Design", "AI Balancing and Design", "Player movement systems", "Debugging and Bug fixing" ],
+    image: "images/GTA6/projectThumb.jpg",
+    links: [
+      { text: "Visit Rockstar Games", url: "https://www.rockstargames.com/VI" },
+      { text: "Game Credits website", url: "https://www.rockstargames.com/gta-v/thankyou" }
+    ],
+    dates: "Jun 2021 - Present",
+    role: "Designer: Exploration & Ambient Content",
+    tools: [ "In-house tools" ],
+    about: "My first AAA title, working on one of the most anticipated games ever. A dream come true.",
+    experience: [
+      "This project is under NDA, so I cannot disclose any details about my work on this project", 
+      "I can only say that I am working on the exploration and ambient content for the game, developing some of the most unique and memorable experiences this game has to offer with some of the most talented individuals in the industry.",
+      "I am so grateful for the opportunity to work on this once in a lifetime project. I've learned so much since I joined Rockstar Games and I am very excited about the future of this project.",
+    ],
     media: [
-      { type: "image", src: "https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg" },
-      { type: "image", src: "https://www.rockstargames.com/VI/_next/static/media/Mount_Kalaga_National_Park_03.037k2s87rwuxc.jpg" },
+      { type: "image", src: "images/GTA6/projectThumb.jpg" },
+      { type: "image", src: "images/GTA6/projectPic0.jpg" },
+      { type: "image", src: "images/GTA6/projectPic1.jpg" },
       { type: "video", youtubeId: "tJbzMqJGH4k" }
     ]
   },
   {
     id: 2,
+    title: "ABXR Engine (Now 'Niloom.ai')",
+    category: "engineering",
+    tags: [ "Tech Startup", "Software Engineering", "Augmented Reality" ],
+    image: "images/ABXR/projectThumb.jpg",
+    links: [
+      { text: "Visit Niloom.ai", url: "https://www.niloom.ai" },
+      { text: "Columbia University Collaboration - IG Post 1", url: "https://www.instagram.com/p/CEKLWvSlHaJ/" },
+      { text: "Columbia University Collaboration - IG Post 2", url: "https://www.instagram.com/p/CEDDx80lc-J/" }
+    ],
+    dates: "Jul 2020 - Apr 2021",
+    role: "Junior Engineer",
+    tools: [ "Unity", "C#", "Visual Studio", "GitHub", "Asana", "Google Firebase", "Adobe XD", "Apple TestFlight" ],
+    about: "Write something here",
+    experience: [
+      "Write something here",
+    ],
+    media: [
+      { type: "image", src: "images/ABXR/projectThumb.jpg" },
+      { type: "image", src: "images/ABXR/projectPic2.jpg" },
+      { type: "image", src: "images/ABXR/projectPic0.svg" },
+      { type: "image", src: "images/ABXR/projectPic1.png" },
+    ]
+  },
+  {
+    id: 3,
     title: "3, 2, 1 Launch!",
     category: "undergradwork",
     tags: [ "Undergrad Work", "Full Sail University", "NASA/LSP", "Game Design"],
     image: "images/321Launch/321Launch_Thumb.png",
-    link: "https://apps.apple.com/us/app/3-2-1-launch/id6471444553",
-    linkText: "Download on the App Store",
-    about: "Placeholder description of another project.",
-    experience: "A longer placeholder writeup...",
-    tools: [ "Unity", "C#", "Visual Studio", "Perforce", "Trello", "G Suite", "GarageBand" ],
-    responsibilities: [ "Game Design", "Technical Design", "AI Balancing and Design", "Player movement systems", "Debugging and Bug fixing" ],
+    links: [
+      { text: "Download on the App Store", url: "https://apps.apple.com/us/app/3-2-1-launch/id6471444553" }
+    ],
+    dates: "Feb 2020 - Jul 2020",
+    role: "Game Designer",
+    tools: [ "Unity", "C#", "Visual Studio", "Perforce", "Trello"],
+    about: 'Capstone project for my game design degree. 3, 2, 1 Launch! is an educational game for iOS devices. This game teaches LSP\'s (Launch Services Program) process of launching a rocket into space through 8 different mini-games.',
+    experience: [
+      "This game was built through a unique university partnership between NASA and Orbis Leadership & Management (the student-led master's program production house at Full Sail University).",
+
+      "This project was an introduction to how real world game design works, everything stopped being about assignments and doing one time prototypes for a class. As soon as I accepted my new role it was all about meeting deadlines, sustaining long standing designs, the ability to quickly adapt my designs to feedback from leads or features being rolled into the project. It was so rewarding to finally be able to work with full assets made by artist and animator teammates and finally work on something that didn’t have the placeholder look I was used to through my degree.",
+
+      "I joined the project in February, 2020 and left it around July, 2020 right after graduating. I designed 3 mini games while working on this project, two of them made it to the final version of the game (Contract mini game and Satellite Cleaning). The game didn’t release until 2024, going through the hands of multiple other students at Full Sail so I was very excited to see my mini games still in the game after so many years."
+    ],
     media: [
       { type: "image", src: "images/321Launch/projectPic0.webp" },
       { type: "image", src: "images/321Launch/projectPic1.webp" },
@@ -39,7 +82,7 @@ const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Project Photography",
     category: "undergradwork",
     tags: [ "Undergrad Work", "Full Sail University", "Game Design"],
