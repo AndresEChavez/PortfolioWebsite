@@ -25,14 +25,18 @@
                             amusement, serenity, and joy in players and inspire them to be their best version.</p>
                     </div>
                     <div id="p2" class="about-paragraph">
-                        <p>I grew up building "Mini-games" on Minecraft, I would create a creative world, make some rules,
-                        and write them on Minecraft signs and play them with friends.
-                        After that, I started designing levels on Halo 4's Forge Mode, and then I moved into Unity</p>
+                        <p>I grew up building "Mini-games" on Minecraft, I would create a creative world, make some
+                            rules,
+                            and write them on Minecraft signs and play them with friends.
+                            After that, I started designing levels on Halo 4's Forge Mode, and then I moved into Unity
+                        </p>
                     </div>
                     <div id="p3" class="about-paragraph">
-                        <p>I have a life outside games too, I enjoy playing Tennis, I like taking rides in my skateboard, I
-                        enjoy watching anime, Star Wars is my favorite thing in the galaxy, Coldplay is my favorite band
-                        and I recently started to write stories as a hobby.</p>
+                        <p>I have a life outside games too, I enjoy playing Tennis, I like taking rides in my
+                            skateboard, I
+                            enjoy watching anime, Star Wars is my favorite thing in the galaxy, Coldplay is my favorite
+                            band
+                            and I recently started to write stories as a hobby.</p>
                     </div>
                 </div>
 
@@ -63,7 +67,36 @@
 
         <section class="panel" data-panel="contact">
             <h2>Contact</h2>
-            <p>Placeholder: email, LinkedIn, itch.io, GitHub — whatever links you'll want later.</p>
+            <div class="social-links">
+                <label>Socials</label>
+                <div class="social-links-separator">
+                    <a href="www.linkedin.com/in/andresechavez" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="https://www.instagram.com/andrew.chv/" target="_blank" class="social-link">Instagram</a>
+                    <a href="https://x.com/andresechv" target="_blank" class="social-link">X (formerly Twitter)</a>
+                </div>
+            </div>
+
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqpedoqr" method="POST">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
         </section>
     </main>
     <nav class="dock">
@@ -94,6 +127,7 @@
     <script src="projects-data.js"></script>
     <script src="script.js"></script>
     <script src="console.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

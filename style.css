@@ -152,6 +152,106 @@ h2 {
   opacity: 1;
 }
 
+/*Contact Page*/
+.social-links-separator {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.social-link {
+  padding: 0.5rem 1rem;
+  background: #16213e;
+  color: #7a8bb5;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-form {
+  max-width: 560px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.social-links label,
+.form-row label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #7a8bb5;
+}
+
+.form-row input,
+.form-row textarea {
+  background: rgba(22, 33, 62, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  color: #eee;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #4fc3f7;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.3);
+}
+
+.form-row textarea {
+  resize: vertical;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.submit-btn {
+  padding: 0.7rem 1.5rem;
+  background: #16213e;
+  color: #4fc3f7;
+  border: 2px solid #4fc3f7;
+  border-radius: 20px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 1rem;
+  min-height: 1.5rem;
+}
+
+.form-status.success {
+  color: #6fe3a1;
+}
+
+.form-status.error {
+  color: #ff7b8a;
+}
+
 /*About*/
 .about-layout {
   display: flex;
