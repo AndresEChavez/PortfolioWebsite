@@ -78,34 +78,6 @@ h2 {
 .console-menu {
   display: flex;
   gap: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.console-progress {
-  position: relative;
-  height: 2px;
-}
-
-.console-progress-track {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.console-progress-dot {
-  position: absolute;
-  top: -3px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #4fc3f7;
-  box-shadow: 0 0 10px #4fc3f7;
-  left: 36%;
-  transform: translateX(-50%);
-  transition: left 0.3s ease;
 }
 
 .console-tile {
@@ -311,12 +283,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Tile sizes: change these numbers to rearrange the collage */
 .tile-steam   { grid-column: span 10; }
 .tile-movie   { grid-column: span 5; }
 .tile-spotify { grid-column: span 15; }
 
-/* Embed sizes: this is where you pick each one */
 .tile iframe {
   display: block;
   width: 100%;
