@@ -11,15 +11,47 @@
 <body>
     <header>
         <span class="console-title">Andres Chavez · Game Designer</span>
-        <span class="console-clock" id="console-clock">00:00:00</span>
     </header>
     <main class="stage">
         <section class="panel" data-panel="about">
             <h2>About Me</h2>
             <div class="about-layout">
+                <div class="about-data">
+                    <div class="data-row">
+                        <span class="data-label">Identity</span>
+                        <span class="data-value">Andres Chavez - Game Designer</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Location</span>
+                        <span class="data-value">San Diego, CA</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Experience</span>
+                        <span class="data-value">5+ years in game design and development</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Education</span>
+                        <span class="data-value">B.S. Game and Interactive Media Design - Full Sail University</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Current Role</span>
+                        <span class="data-value">Designer: Exploration & Ambient Content @ Rockstar Games San
+                            Diego</span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">Resume</span>
+                        <span class="data-value">
+                            <a href="resume.pdf" target="_blank" class="resume-link">View My Resume ↗</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="about-photo">
+                    <img src="/images/me.jpeg" alt="Andres Chavez">
+                </div>
                 <div class="about-bio">
                     <div id="p1" class="about-paragraph">
-                        <p>There is no bigger satisfaction than seeing someone having fun with a mechanic, a level,
+                        <p>To me there is no bigger satisfaction than seeing someone having fun with a mechanic, a
+                            mission,
                             or a system you crafted from zero. That's why Game Design is my passion. Since the beginning
                             of my Game Design career, my goal has been and will always be creating these feelings of
                             amusement, serenity, and joy in players and inspire them to be their best version.</p>
@@ -31,18 +63,30 @@
                             After that, I started designing levels on Halo 4's Forge Mode, and then I moved into Unity
                         </p>
                     </div>
-                    <div id="p3" class="about-paragraph">
-                        <p>I have a life outside games too, I enjoy playing Tennis, I like taking rides in my
-                            skateboard, I
-                            enjoy watching anime, Star Wars is my favorite thing in the galaxy, Coldplay is my favorite
-                            band
-                            and I recently started to write stories as a hobby.</p>
+                    <div id="p3" class="about-paragraph-last">
+                        <p>I love playing Tennis, I enjoy watching anime, huge Star Wars fan. Love soccer and baseball
+                            (Go Padres!)</p>
                     </div>
                 </div>
-
-                <div class="about-photo">
-                    <img src="https://placehold.co/280x280/16213e/eee?text=Photo" alt="Andres Chavez">
-                    <a href="resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+                <div class="about-collage">
+                    <div class="tile tile-spotify">
+                        <h3>Recent Listens</h3>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6RSJAsEDz7H?utm_source=generator&theme=0&si=4cc93a65f3f84dc2"
+                            frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="tile tile-steam">
+                        <h3>Currently Playing</h3>
+                        <iframe src="https://store.steampowered.com/widget/2075800/" loading="lazy"></iframe>
+                    </div>
+                    <div class="tile tile-movie">
+                        <h3>Favorite Movie</h3>
+                        <a href="https://boxd.it/i7Q4" target="_blank" class="movie-link">
+                            <img src="/images/sound-of-metal.jpg" alt="Sound of Metal" class="movie-poster">
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

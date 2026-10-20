@@ -260,6 +260,93 @@ h2 {
   flex-wrap: wrap;
 }
 
+.about-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1 1 300px;
+  background: #16213e;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.data-label{
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #7a8bb5;
+}
+
+.data-value {
+  font-size: 1rem;
+  color: #eee;
+  text-align: right;
+}
+
+.about-collage {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.tile {
+  background: rgba(22, 33, 62, 0.6);
+  border-radius: 16px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.tile h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7a8bb5;
+  margin-bottom: 1rem;
+}
+
+/* Tile sizes: change these numbers to rearrange the collage */
+.tile-steam   { grid-column: span 10; }
+.tile-movie   { grid-column: span 5; }
+.tile-spotify { grid-column: span 15; }
+
+/* Embed sizes: this is where you pick each one */
+.tile iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.tile-spotify iframe { height: 152px; }
+.tile-steam iframe   { height: 200px; }
+
+.tile img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.tile-movie img {
+  aspect-ratio: 2 / 3;
+  max-height: 420px;
+}
+
+@media (max-width: 700px) {
+  .tile-spotify,
+  .tile-steam,
+  .tile-movie {
+    grid-column: span 12;
+  }
+}
+
 .about-paragraph {
   flex: 1 1 300px;
 }
@@ -277,29 +364,11 @@ h2 {
 }
 
 .about-photo img {
-  width: 200px;
-  height: 200px;
+  width: 355px;
+  height: 355px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.resume-btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: #e94560;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.resume-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
 }
 
 /*Projects*/
