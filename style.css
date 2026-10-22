@@ -327,13 +327,28 @@ h2 {
 
 .about-photo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  width: 355px;
+  height: 355px;
   flex: 0 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  border-radius: 16px;
 }
 
-.about-photo img {
+.photo-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 355px;
+  height: 355px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
+}
+
+.photo-item img {
   width: 355px;
   height: 355px;
   object-fit: cover;
