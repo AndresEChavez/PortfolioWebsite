@@ -86,13 +86,38 @@
                     </div>
                 </div>
                 <div class="about-collage">
-                    <div class="tile tile-spotify">
-                        <h3>Recent Listens</h3>
-                        <iframe data-testid="embed-iframe" style="border-radius:12px"
-                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6RSJAsEDz7H?utm_source=generator&theme=0&si=4cc93a65f3f84dc2"
-                            frameBorder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            loading="lazy"></iframe>
+                    <div class="tile tile-achievements">
+                        <h3>Achievements</h3>
+                        <ul id="achievement-list" class="achievement-list">
+                            <li class="achievement unlocked">
+                                <span class="achievement-icon">🏆</span>
+                                <div class="achievement-info">
+                                    <strong>Graduated as Class Valedictorian</strong>
+                                    <p>Achieved the highest GPA in my graduating class.</p>
+                                </div>
+                                <span class="achievement-date">June 2020</span>
+                            </li>
+
+                            <li class="achievement unlocked">
+                                <span class="achievement-icon">🏆</span>
+                                <div class="achievement-info">
+                                    <strong>5+ years in the games industry</strong>
+                                    <p>Wohoo! 5 years in AAA and counting!</p>
+                                </div>
+                                <span class="achievement-date">June 2026</span>
+                            </li>
+
+                            <li class="achievement locked">
+                                <span class="achievement-icon">🔒</span>
+                                <div class="achievement-info">
+                                    <strong>Ship first AAA title</strong>
+                                    <p>Grand Theft Auto VI - November 19th, 2026</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 96%"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="tile tile-steam">
                         <h3>Currently Playing</h3>
@@ -103,6 +128,22 @@
                         <a href="https://boxd.it/i7Q4" target="_blank" class="movie-link">
                             <img src="/images/sound-of-metal.jpg" alt="Sound of Metal" class="movie-poster">
                         </a>
+                    </div>
+                    <div class="tile tile-spotify">
+                        <h3>Recent Listens</h3>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6RSJAsEDz7H?utm_source=generator&theme=0&si=4cc93a65f3f84dc2"
+                            frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="tile tile-youtube">
+                        <h3>Design Analysis</h3>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/RQPCYRmBMrA?si=uveSsL-RMxHceuVE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
