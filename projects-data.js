@@ -83,31 +83,27 @@ const projects = [
   },
   {
     id: 4,
-    title: "Project Photography",
+    title: "School Work",
     category: "undergradwork",
-    tags: [ "Undergrad Work", "Full Sail University", "Game Design"],
-    image: "https://static.wixstatic.com/media/8e6a77_c2411dc82526491488ad3e4ec2963d9d~mv2.png/v1/fill/w_1920,h_1080,al_c,q_95,enc_auto/8e6a77_c2411dc82526491488ad3e4ec2963d9d~mv2.png",
-    about: 'Project Photography is a 1st person puzzle game prototype for Windows PCs. This prototype was developed by a team of 6 designers for one of my classes at Full Sail University (1-month duration). I fulfilled the role of a Game Designer and Technical Designer for this project.',
-    experience: `I worked as a Technical Designer for most of my time working on this project and largely developed my scripting skills.
-​
-Features I worked on:  
-Player and camera movement
-      Built and designed the player and camera movement from scratch, the movement controls had to be as precise and responsive as possible as precision and timing were important factors and pillars for each level.
-I used ridigbody for player movement, Quaternions for the player's Y-axis rotation, and a sphere cast for the jumping. The camera moves with Quaternions as well on the X and Y axes. The sensibility for all of the mouse-related movement can be adjusted in the pause menu.
- 
-Polaroid and Flashlight mechanics 
-- Polaroid: The player can move interactable objects with this tool by taking a picture of them and then placing them wherever the player wants. I used a raycast to detect if the player takes a picture of the interactable object and for placing the captured object back on the level.
-- Flashlight: The flashlight is used to manipulate the physics of the interactable objects, left click to freeze, and right-click to unfreeze the physics on the interactable object the player is aiming at. 
- 
-I also worked on designing some of the AI enemies, fixed a lot of bugs, and made the song looping in the background with GarageBand. 
-​
-What went right? I'm very proud of how the player movement ended up being and I'm also proud of how well the mechanics we designed work together 
-​
-What went wrong? I feel like we didn't balance our time right, we spend most of our time as a team scripting and bug fixing mechanics but we forgot about the level design, I feel like we missed a great opportunity to make some awesome levels for our portfolio. `,
-    tools: [ "Unity", "C#", "Visual Studio", "Perforce", "Trello", "G Suite", "GarageBand" ],
-    responsibilities: [ "Game Design", "Technical Design", "AI Balancing and Design", "Player movement systems", "Debugging and Bug fixing" ],
+    tags: [ "Undergrad Work", "Full Sail University", "Student Projects"],
+    image: "images/StudentWork/CarWave.jpg",
+    dates: "Sep 2018 - Jun 2020",
+    role: "Game Design Student",
+    tools: [ "Unity", "Unreal Engine", "C#", "Visual Studio", "Perforce", "Trello" ],
+    about: 'A collection of my school work from Full Sail University. This includes various projects I worked on during my time at Full Sail, including game design, level design, and other related coursework.',
+    experience: [
+        "Ordered by the order of appearance in the media section above:",
+        "1) Car Wave: This is a quick prototype demo that I worked on for a short period of time during my early days at Full Sail. It is a rhythm game heavily inspired by the 'vaporwave' genre. The player drags a car in a track to hit the notes in it, the player must match the color of the notes to collect them.",
+        "2) Project Cyborg: 3rd person platformer game prototype for Windows PCs. This prototype was developed by a team of 2 designers for one of my classes in Full Sail University (1-month duration). I fulfilled the role of a Game Designer, Technical Designer and Playtest conductor for this project",
+        "3) Project Photography: Project Photography is a 1st person puzzle game prototype for Windows PCs. This prototype was developed by a team of 6 designers for one of my classes at Full Sail University (1-month duration). I fulfilled the role of a Game Designer and Technical Designer for this project. This project was my initial capstone project before I switched to the 3, 2, 1 Launch! NASA project.",
+        "4) Scraps: SCRAPS is a 3rd person adventure game with mechanics and gameplay developed at Full Sail University for students to experiment and create levels and content within it. Developed a level over the course of 3 months for a series of classes focused in level design. This was my first time building a level, thanks to this project I learned the level design basics, concepts like level pacing (IPM), flow, setting clear goals for a player."
+    ],
     media: [
-      { type: "video", youtubeId: "crmn64dIpT4" }
+      { type: "video", youtubeId: "yVZfOd9hbdI" },
+      { type: "video", youtubeId: "V-uwPkB9jMY" },
+      { type: "video", youtubeId: "crmn64dIpT4" },
+      { type: "image", src: "images/StudentWork/Scraps.jpg"},
+      { type: "video", youtubeId: "6Rua9RFtMP8" },
     ]
   }
 ];
