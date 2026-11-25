@@ -14,6 +14,11 @@ function setHTML(elementId, html) {
     if (el) el.innerHTML = html;
 }
 
+function addToHTML(elementId, html) {
+    const el = document.getElementById(elementId);
+    if (el) el.innerHTML += html;
+}
+
 // Accepts either a single string or an array of strings
 function paragraphs(content) {
     if (!content) return '';
@@ -32,6 +37,13 @@ if (project) {
     setText('info-role', project.role);
     setHTML('info-tools', (project.tools || []).map((tool) => `<span class="tool-tag">${tool}</span>`).join(''));
 
+    if (project.reviews) {
+        addToHTML('project-info-root', `<dt>Scores</dt><dd id="info-reviews"></dd>`);
+        setHTML('info-reviews', (project.reviews || []).map((review) => `<a class="review-link" href="${review.url}" target="_blank" rel="noopener noreferrer">
+        ${review.text}: ${review.score}
+        <span class="external-icon">↗</span>
+    </a>`).join(''));
+    }
 
     const mediaContainer = document.getElementById('project-media');
     const mediaItems = project.media || [];

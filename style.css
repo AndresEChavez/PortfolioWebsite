@@ -251,9 +251,11 @@ h2 {
 
 .data-label{
   font-size: 1rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #7a8bb5;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .data-value {
@@ -711,6 +713,11 @@ h2 {
 
 .project-info dd {
   margin: 0.25rem 0 0;
+}
+
+.review-link {
+  color: #ffffff;
+  display: inline-block;
 }
 
 .tool-tag {
