@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #0c1226;
+  color-scheme: dark;
+}
+
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
