@@ -110,6 +110,11 @@ h2 {
   color: #7a8bb5;
 }
 
+.console-icon-img{
+  width: 55%;
+  height: auto;
+}
+
 .console-tile.active {
   opacity: 1;
 }
